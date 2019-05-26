@@ -1,0 +1,63 @@
+---
+title: "Statisic inference - Assignment1 part1"
+author: "Simon Baumgart"
+date: "May 25, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part I - compare exponential distribution and the Central Limit Theorem 
+
+## Introduction
+In this first part of the assignment within the "Statistic Inference" Coursera course a dataset will be simulated and compared to its theoretical mean and variance. The simulated distribution will be compared graphically and by t.test. Closer instructions and guide lines can be found here:
+[assignment 1 - statistical inference - coursera](https://www.coursera.org/learn/statistical-inference/peer/3k8j5/statistical-inference-course-project)
+
+## simulation of the data
+```{r}
+set.seed(1)
+mns_1000 <- c()
+for(i in 1:1000){
+    mns <- mean(rexp(n = 40,rate = 0.2))
+    mns_1000 <- c(mns_1000, mns)
+}
+
+simMn <- mean(mns_1000)
+varMn <- var(mns_1000)
+```
+
+## theoretical mean
+```{r}
+theoMn <- 1/0.2
+theoVar <- (1/0.2)^2 /40
+```
+
+## comparison of simulated and theoretical 
+
+```{r}
+library(ggplot2)
+gplot <- data.frame(mns_1000)
+m <- ggplot(gplot, aes(x = mns_1000)) + xlab("simulated mean")
+m <- m + geom_histogram(aes(y=..density..), colour = "black", fill = "blue")
+m + geom_density(colour = "red", size = 1) + geom_vline(xintercept = theoMn, color = "red", size =1) + geom_vline(xintercept = simMn, color = "black", size =1)
+```
+In this histogram we see that the data is approximately even distributed which is supported by the 
+## statistical comparison between the theoretical and the simulated values
+
+### 95% conf interv l
+```{r}
+simConfIntervl <- round( simMn + c(-1,+1) * 1.96 * sd(mns_1000)/sqrt(40),3)
+theoretiConfIntervl <- round(theoMn + c(-1,+1) * 1.96 * theoVar/sqrt(40),3)
+
+simConfIntervl
+theoretiConfIntervl
+```
+
+### norml distribution
+
+```{r}
+qqnorm(mns_1000)
+qqline(mns_1000)
+```
