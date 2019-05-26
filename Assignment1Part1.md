@@ -9,7 +9,7 @@ Part I - Compare the simulated exponential distribution to the theoretical value
 Introduction
 ------------
 
-In this first part of the assignment within the "Statistic Inference" Coursera course a dataset will be simulated and compared to its theoretical mean and variance. The simulated distribution will be compared graphically and by t.test. Detailed instructions and guide lines can be found here: [assignment 1 - statistical inference - coursera](https://www.coursera.org/learn/statistical-inference/peer/3k8j5/statistical-inference-course-project)
+In this first part of the assignment within the "Statistical Inference" Coursera course a dataset will be simulated and compared to its theoretical mean and variance. The simulated distribution will be compared graphically and by t.test. Detailed instructions and guide lines can be found here: [assignment 1 - statistical inference - coursera](https://www.coursera.org/learn/statistical-inference/peer/3k8j5/statistical-inference-course-project)
 
 brief summary:
 The mean of the exponential distribution is 1/lambda
