@@ -12,9 +12,9 @@ Introduction
 In this first part of the assignment within the "Statistical Inference" Coursera course a dataset will be simulated and compared to its theoretical mean and variance. The simulated distribution will be compared graphically and by t.test. Detailed instructions and guide lines can be found here: [assignment 1 - statistical inference - coursera](https://www.coursera.org/learn/statistical-inference/peer/3k8j5/statistical-inference-course-project)
 
 brief summary:
-The mean of the exponential distribution is 1/lambda
-Labmda is 0.2
-40 exponentials are used to build one data point
+The mean of the exponential distribution is 1/lambda  
+Lambda is 0.2  
+40 exponentials are used to build one data point  
 thousand simulations will be run in total
 
 simulation of the data
