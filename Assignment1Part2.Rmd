@@ -2,9 +2,7 @@
 title: "Statisic inference - Assignment1 part2"
 author: "Simon Baumgart"
 date: "May 26, 2019"
-output:
-  html_document: default
-  pdf_document: default
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -44,8 +42,9 @@ df_means_VC <- ToothGrowth %>% filter(supp == "VC") %>% group_by(dose) %>% summa
 df_merged <- rbind(df_means_OJ, df_means_VC)
 
 ggplot(data = ToothGrowth , aes(x = dose,y = len, group = dose, col = dose)) + 
-    geom_boxplot() + facet_grid(.~supp)
+    geom_boxplot() + facet_grid(.~supp)  + ggtitle("Tooth Growth by length, supplement and dose") +  xlab("Dose (mg/day)") + ylab("Length")
 ```
+  
 This plot already shows that there is a dose response for the length of odontoblasts in both groups. If those are statistically relevant needs to be validated.
 
 ## statistic comparison between supplements and doses
@@ -90,7 +89,7 @@ t.test(VC_1, OJ_1, paired = F, var.equal = F)
 t.test(VC_2, OJ_2, paired = F, var.equal = F)
 
 ``` 
-
-With these comparison we can conclude that there are differences between the treatments of either vitamine C or orange juice. The differences are between the dosing of 0.5 and 1. However, there are no differences when dosing both with 2mg/ day on the growth of the odontoblasts of guinea pigs.
-It would be however interesting to compare those groups to non treated groups to see how the base level is. Further, it might be interesting to see if those treatments can be compared to human teeth grows in some way.
+## conclusion
+With these comparison we can conclude that __there are differences between the length of teeth when supplementing with vitamine C or orange juice__. The differences are between the dosing of 0.5 and 1 mg/day. However, there are __no differences to the lower dosed groups when dosing either with vitamine C or orange juice with 2mg/ day__ on the growth of the odontoblasts of guinea pigs.
+It would be however interesting to compare those groups to non-treated groups to see how the base level is. Further, it might be interesting to see if those treatments can be compared to human teeth grows in some way.
 

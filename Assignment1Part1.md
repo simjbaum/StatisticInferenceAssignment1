@@ -48,7 +48,7 @@ library(ggplot2)
 gplot <- data.frame(mns_1000)
 m <- ggplot(gplot, aes(x = mns_1000)) + xlab("simulated mean")
 m <- m + geom_histogram(aes(y=..density..), colour = "black", fill = "blue")
-m + geom_density(colour = "red", size = 1) + geom_vline(xintercept = theoMn, color = "red", size =1) + geom_vline(xintercept = simMn, color = "black", size =1)
+m + geom_density(colour = "red", size = 1) + geom_vline(xintercept = theoMn, color = "red", size =1) + geom_vline(xintercept = simMn, color = "black", size =1) + ggtitle("Histogram of simulated data") +  xlab("Value") + ylab("Density")
 ```
 
 ![](Assignment1Part1_files/figure-markdown_github/unnamed-chunk-3-1.png)
