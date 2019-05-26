@@ -1,4 +1,4 @@
-# StatisticInference_Assignment_1
+# Statistic Inference Assignment 1
 This repository is for the final assignment in the coursera course "Statistic Inference" from the John Hopkins University -
 https://www.coursera.org/learn/statistical-inference/
 
