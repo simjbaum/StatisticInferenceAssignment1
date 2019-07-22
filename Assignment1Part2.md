@@ -16,16 +16,11 @@ To get the dataset follow this link:
 
 
 
-### loading of the data
-
-``` r
-data(ToothGrowth)
-```
-
-exploration of the dataset
+Structure of the ToothGrowth dataset
 --------------------------
 
 ``` r
+data(ToothGrowth)
 head(ToothGrowth)
 ```
 
