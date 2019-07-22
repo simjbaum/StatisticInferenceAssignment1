@@ -54,7 +54,7 @@ m + geom_density(colour = "red", size = 1) + geom_vline(xintercept = theoMn, col
 
 ![](Assignment1Part1_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-The data we generated follows a approximate normal standard distribution as shown by the histogram and the density indicated by the red line overlaying the data. Further, the red and the black line indicating the theoretical mean (red) and the mean of the simulated data (black) are almost overlaying.
+The data we generated follows a approximate normal standard distribution as shown by the histogram and the density indicated by the red line overlaying the data. Further, the red and the black line indicating the theoretical mean (red) and the mean of the simulated data (black). Both are almost similar indicating that the 1000 simulations are sufficient to create a good approximation to the theoretical mean.
 
 statistical comparison between the theoretical and the simulated values
 -----------------------------------------------------------------------
