@@ -1,4 +1,4 @@
-Statistic inference - Assignment1 part1
+Statistic Inference - Assignment1 part1
 ================
 Simon Baumgart
 May 25, 2019
@@ -78,7 +78,7 @@ theoretiConfIntervl
 
 The two 95% confidence intervals of the simulated (first value) and the theoretical values are compareable and close to each other.
 
-### norml distribution
+### normal distribution
 
 ``` r
 qqnorm(mns_1000)
@@ -87,4 +87,4 @@ qqline(mns_1000)
 
 ![](Assignment1Part1_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-Finally, the correlation of the theoretical quantiles of a normal distribution with the quantiles we observe in our generated data gives us good support that data we generated is normally distributed.
+The correlation of the theoretical quantiles of a normal distribution with the simulated quantiles we observe here supports the notion that the data we have generated is normally distributed.
