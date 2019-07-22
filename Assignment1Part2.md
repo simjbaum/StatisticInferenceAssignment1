@@ -9,9 +9,9 @@ part II - Analysis of the tooth growth dataset
 Introduction
 ------------
 
-The data set "ToothGrowth" is analyzed within this document to explore the effect of vitamine C on the length of the odontoblasts. Briefly, guinea pigs are get different doses (0.5, 1, 2 mg/day) of either orange juice (OJ) or vitamine C (VC) over an unknown timeframe. The length of the odontoblasts is then compared between each group. 
+The data set "ToothGrowth" is analyzed within this document to explore the effect of vitamine C on the growth of the odontoblasts of guinea pigs. Briefly, guinea pigs getting different doses (0.5, 1, 2 mg/day) of either orange juice (OJ) or vitamine C (VC) over the same timeframe. After the treatment the length of the odontoblasts is compared between each group. 
 
-Explanations about the dataset are here:
+To get the dataset follow this link:
 [ToothGrowth dataset](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/ToothGrowth.html)
 
 
