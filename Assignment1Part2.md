@@ -79,16 +79,12 @@ ggplot(data = ToothGrowth , aes(x = dose,y = len, group = dose, col = dose)) +
 
 ![](Assignment1Part2_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-This plot already shows that there is a dose response for the length of odontoblasts in both groups. If those are statistically relevant needs to be validated.
+This plot shows a dose response for vitamine C and orange juice on the length of odontoblasts. Next, these effects are tested if their distribution is statistically different.
 
-statistic comparison between supplements and doses
+Statistic comparison between supplements and doses
 --------------------------------------------------
 
-The boxplot indicate that there are differences between the median of the different doses within the different treatment groups. However, it is not clear if - the differecens which we see are significant - the differences between the different treatments are significant
-
-Therefore, the next lines will analyse exactly those differences:
-
-compare the significance between the doses within the orange juice group
+First, I compare the significance between the doses within group which was supplemented with orange juice
 
 ``` r
 OJ_05 <- ToothGrowth %>% filter(supp == "OJ") %>% filter(dose == 0.5) %>% select(len)
@@ -128,10 +124,9 @@ t.test(OJ_1, OJ_2, paired = F, var.equal = F)
     ## mean of x mean of y 
     ##     22.70     26.06
 
-Both comparisons show that the comparison to the next higher dose is significant and that we can reject the NULL-Hypothesis that with the treatment there is no difference. We can further say that it is likely that with the higher dosing of orange juice in this given experiment the length of the odontoblasts are increased.
+The comparisons show that there is a difference on the length of the odontoblasts with higher doses of orange juice with a p-value < 0.05. If this level of confidence is enough we can reject the NULL-Hypothesis that the distribution of the treatment values are same and that there is no difference. 
 
-Next we do the same analysis with for the vitamine C group:
-
+In the following the same analysis is performed for the vitamine C group:
 ``` r
 VC_05 <- ToothGrowth %>% filter(supp == "VC") %>% filter(dose == 0.5) %>% select(len)
 VC_1 <- ToothGrowth %>% filter(supp == "VC") %>% filter(dose == 1) %>% select(len)
@@ -172,7 +167,7 @@ t.test(VC_1, VC_2, paired = F, var.equal = F)
 
 We can conclude that with the higher dosing of vitamine C there is a significant increase of the tooth length, similarly to the orange juice supplemented group.
 
-Finally, the treatments will be compared if orange juice has a similar effect like vitamine c supplement or if there is a difference
+Finally, the treatments will be compared if orange juice has a similar effect as the vitamine c supplement or if there is a difference between the treatments
 
 ``` r
 t.test(VC_05, OJ_05, paired = F, var.equal = F)
@@ -222,7 +217,5 @@ t.test(VC_2, OJ_2, paired = F, var.equal = F)
     ## mean of x mean of y 
     ##     26.14     26.06
 
-conclusion
-----------
-
-With these comparison we can conclude that **there are differences between the length of teeth when supplementing with vitamine C or orange juice**. The differences are between the dosing of 0.5 and 1 mg/day. However, there are **no differences to the lower dosed groups when dosing either with vitamine C or orange juice with 2mg/ day** on the growth of the odontoblasts of guinea pigs. It would be however interesting to compare those groups to non-treated groups to see how the base level is. Further, it might be interesting to see if those treatments can be compared to human teeth grows in some way.
+We observe differences on the length of odontoblast when supplementing with vitamine C or orange juice. The differences were for doses of 0.5 and 1 mg/day with vitamine C having a greater effect. However, for the lower and the highest dosis there was no different effect observed. This data suggest that dosing of 2mg/ day with either orange juice or vitamine D has the best effect on the growth of odontoblast on guinea pigs. 
+It would be interesting to compare those groups to non-treated group to see how they compare to untreated control and how the base level is. Further, it might be interesting to see if those treatments can be compared to the growth of human teeth.
