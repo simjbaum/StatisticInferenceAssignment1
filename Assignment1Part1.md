@@ -1,4 +1,4 @@
-Statisic inference - Assignment1 part1
+Statistic inference - Assignment1 part1
 ================
 Simon Baumgart
 May 25, 2019
