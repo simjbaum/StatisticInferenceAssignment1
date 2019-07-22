@@ -3,7 +3,7 @@ Statistic inference - Assignment1 part1
 Simon Baumgart
 May 25, 2019
 
-Part I - Compare the simulated exponential distribution to the theoretical value with the Central Limit Theorem
+Part I - Compare the simulated exponential distribution to the theoretical values of the Central Limit Theorem
 ===============================================================================================================
 
 Introduction
