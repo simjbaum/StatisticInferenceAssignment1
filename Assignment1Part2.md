@@ -3,7 +3,7 @@ Statisic Inference - Assignment 1 part II
 Simon Baumgart
 May 26, 2019
 
-part II - Analysis of the tooth growth dataset
+Part II - Analysis of the tooth growth dataset
 ============================================
 
 Introduction
@@ -18,6 +18,10 @@ To get the dataset follow this link:
 
 Structure of the ToothGrowth dataset
 --------------------------
+``` r
+library("dplyr")
+library("ggplot2")
+```
 
 ``` r
 data(ToothGrowth)
@@ -65,20 +69,10 @@ table(ToothGrowth$supp, ToothGrowth$dose)
 The dataset has __60 observations of 3 variables__ with two variables being numeric and one being a factor variable
 
 
-plotting of the data
+Data Plotting 
 --------------------
 
 ``` r
-library("dplyr")
-library("ggplot2")
-data("ToothGrowth")
-
-
-df_means_OJ <- ToothGrowth %>% filter(supp == "OJ") %>% group_by(dose) %>% summarise(value=mean(len)) %>% mutate(supp = "OJ")
-df_means_VC <- ToothGrowth %>% filter(supp == "VC") %>% group_by(dose) %>% summarise(value=mean(len)) %>% mutate(supp ="VC")
-
-df_merged <- rbind(df_means_OJ, df_means_VC)
-
 ggplot(data = ToothGrowth , aes(x = dose,y = len, group = dose, col = dose)) + 
     geom_boxplot() + facet_grid(.~supp)  + ggtitle("Tooth Growth by length, supplement and dose") +  xlab("Dose (mg/day)") + ylab("Length")
 ```
