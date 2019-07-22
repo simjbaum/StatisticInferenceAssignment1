@@ -62,6 +62,9 @@ table(ToothGrowth$supp, ToothGrowth$dose)
     ##   OJ  10 10 10
     ##   VC  10 10 10
 
+The dataset has __60 observations of 3 variables__ with two variables being numeric and one being a factor variable
+
+
 plotting of the data
 --------------------
 
