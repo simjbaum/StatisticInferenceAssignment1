@@ -1,18 +1,20 @@
-Statisic inference - Assignment1 part2
+Statisic Inference - Assignment 1 part II
 ================
 Simon Baumgart
 May 26, 2019
 
-part II - analysing the tooth growth dataset
+part II - Analysis of the tooth growth dataset
 ============================================
 
-introduction
+Introduction
 ------------
 
-Within this part of the assignment the data set "The Effect of Vitamine C on Tooth Growth in Guinea Pigs" is analyzed. More explanatory material can be found here:
-[r data set - follow this link](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/ToothGrowth.html)
+The data set "ToothGrowth" is analyzed within this document to explore the effect of vitamine C on the length of the odontoblasts. Briefly, guinea pigs are get different doses (0.5, 1, 2 mg/day) of either orange juice (OJ) or vitamine C (VC) over an unknown timeframe. The length of the odontoblasts is then compared between each group. 
 
-In short guinea pigs get different doses (0.5, 1, 2 mg/day) of either orange juice (OJ) or vitamine C (VC) and the length of their odontoblast is compared. Within this assignment we ask the question a.) if the dose within the treatments plays a role and if the different treatments have different effects on the length of the odontoblasts.
+Explanations about the dataset are here:
+[ToothGrowth dataset](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/ToothGrowth.html)
+
+
 
 ### loading of the data
 
